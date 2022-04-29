@@ -78,6 +78,9 @@ print("9")
 print("Python is ", x)
 print("Python is "+ y)
 
+#10. escape
+print("you can escape letters with \"\\\", just like this \"")
+
 # 1. In Python, indentation is crucial, 
 #   { } 대신 인덴트가 사용됨.인덴트는 최소 공백 하나 이상이어야 함.
 #   YOU must use the same amount of indents in the same block.
