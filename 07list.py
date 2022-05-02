@@ -41,7 +41,7 @@ thislist.insert(1, "cherry")
 print(thislist)
 
 #5. append & extend into the last position of the list.
-        # the extend() method has no limits in the form, you may add other lists, sets, dictionaries, 
+        # the extend() method has no limits in the object forms, you may add other lists, sets, dictionaries, 
         # or tuples.
 print("\n5")
 thislist.append("orange")
@@ -50,6 +50,61 @@ print(thislist)
 thatlist=["craenberry", "strawberry", "jam"]
 thislist.extend(thatlist)
 print(thislist)
+
+#6. removing the list
+thislist.remove("lemon")
+thislist.pop(2)
+thislist.pop()
+print("\n6.\n", thislist)
+del thislist[1]
+print(thislist)
+thislist.clear()
+print(thislist)
+del thislist
+# print(thislist)   <--- error! thislist doesnt exist!
+
+#7. loop list
+print("\n7.")
+thislist= ['apple', 'cherry', 'banana', 'lemon', 'orange', 'craenberry', 'strawberry', 'jam']
+print("\nfor loop:")
+for x in thislist:
+    print(x)
+print("\nsecond for loop:")
+for i in range(len(thislist)):
+    print(thislist[i])
+print("\nwhile loop:")
+i=0
+while i < len(thislist):
+    print(thislist[i])
+    i+=1
+
+#8. list comprehension
+print("\n8.")
+newlist1= []
+for x in thislist:
+    if "e" in x:
+        newlist1.append(x)
+i=0
+for i in range(len(newlist1)):
+    print(newlist1[i])
+
+print("\nthe above code can be simplified into this ->")
+newlist=[x for x in thislist if "a" in x]
+print(newlist)
+
+#9. more list comprehensions:
+print("\n9.")
+newlist2= [ x.upper() for x in thislist ]
+print(newlist2)
+
+newlist= ['hello' for  x in thislist]
+print(newlist)
+
+newlist3= [x if x!= "banana" else "orange" for x in thislist]
+print(newlist3)
+# -> return the item if it is not banana, if it is then return it as orange.
+
+
 """
 1. lists can contain varius data types at once.
 
@@ -68,6 +123,36 @@ print(thislist)
 4. when inserting the elements, python will take care of everything.
 
 5. when appending, you may giv eonly one argument, and it will be placed at the enfd
+
+6. .remove("item")      : removes the specified item
+    .pop(index)         : removes the specified index
+    .pop()              : removes the last item just like pop in stack structure.
+    del thislist[1]     : removes index[1] in thislist.
+    del thislist        : deletes the whole thislist.
+    .clear()            : empties the list, the list remains, but it has no contents.
+
+        in this case, the "del" is the keyword, and .pop, .remove are the methods.
+
+8. the syntax of list comprehension 
+    -> newlist = [ expression for item in iterable if condition == True ]
+
+below is th example -->
+
+    newlist= []
+    for x in thislist:
+        if "e" in x:
+            newlist1.append(x)
+    
+this can be written as:
+    newlist= [ x for x in thislist if "a" in x]       
+
+9. newlist2= [ x.upper() for x in thislist ]
+    can be interpreted as this -> for every x in thislist, apply the method "x.upper()"
+    so in #8, you can say -> for every x in thislist, choose x respectively.
+                            which is, while going through the for loop, choose all x's respectively.
+
+
+
 
 """
 
