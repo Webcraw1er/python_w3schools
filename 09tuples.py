@@ -106,6 +106,9 @@ thistuple=(1, 2, 3,4)
 tuple4= thistuple*2
 print(tuple4)
 
+thistuple=("apple", "orange", "apple", "watermelon", "orange")
+print(thistuple.index("orange"))    # -> returns only the first index
+print(thistuple.count("orange"))    # -> returns the number of the value used in the tuple.
 
 
 

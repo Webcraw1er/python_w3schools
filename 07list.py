@@ -52,10 +52,12 @@ thislist.extend(thatlist)
 print(thislist)
 
 #6. removing the list
+print("\n6.")
 thislist.remove("lemon")
-thislist.pop(2)
+a= thislist.pop(2)
+print(a)
 thislist.pop()
-print("\n6.\n", thislist)
+print(thislist)
 del thislist[1]
 print(thislist)
 thislist.clear()
