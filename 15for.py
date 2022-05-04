@@ -58,5 +58,6 @@ else:
     else:
         in the end of the for loop executes that one block of code at the end of the loop.
 
+2. if the code "break"s out of the loop, then it will not execute the else: statement.
 
 """
