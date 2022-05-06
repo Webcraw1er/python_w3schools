@@ -60,4 +60,13 @@ else:
 
 2. if the code "break"s out of the loop, then it will not execute the else: statement.
 
+
+****************
+if you want something to be declared but dont want the content in it, you pass that shit.
+like
+    for x in range(2,8):
+        pass
+    class something:
+        pass
+
 """

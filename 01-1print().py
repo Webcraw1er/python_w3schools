@@ -12,3 +12,9 @@ print(" glad to meet you\n")
 print(" Hello,", end='')
 print(" my name\n is Jus", "tin.", sep='', end='')
 print(" glad to meet you\n")
+
+x=5
+y=x
+y-=1
+print(x)
+print(y)
