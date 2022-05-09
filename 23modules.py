@@ -17,15 +17,52 @@
         moduleName.functionName(parameter)
 
 """
-
+#1. calling from a module.
+print("\n1.")
+from re import X
 import module23
 
 module23.myfunc1("Justin")
+print(module23.randict["name"])
+print(module23.ranint1)
 
+#2. alias of a module
+import module23 as m23
 
+a= m23.randict["age"]
+print("\n2.\n", a)
+x= dir(m23)
+print(x)
+
+#3. built-in modules
+print("\n3.")
+import platform
+a=platform.system()
+print(X)
+
+#4. import only the part of the module
+print("\n4.")
+from module23 import randict
+x= randict["location"]
+print(x)
 
 """
-python identifiers cannot start with a number
+1. python identifiers cannot start with a number. 
+    SO YOU DONT NAME YOUR MODULE STARTING WITH NUMBERS.
 
+    You can call all variables, methods, functions, and iterables in a module.
 
+2. you can make an alias of a module by
+        import module23 as m23
+
+    the dir() function lists all variables and functions in a method.
+        could be used on a platform module, too.
+
+3. there are several built-in modules like "platform" in py.
+
+4. you can import only a part of the module by the following statement.
+        from m23 import randict
+
+        WHEN IMPORTING A MODULE WITH "FROM" KEYWORD,  
+        do not use a module name when referring to elements in the module.                                                                                                                                                                                                  
 """
