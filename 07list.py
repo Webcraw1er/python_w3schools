@@ -6,8 +6,8 @@
 #   3. order cannot e changeed
 #   4. stack structure(new items placed at the end of the list
 print("1")
-#thislist = ["apple", "banana", "apple", "cherry", 1, True, 5]
-thislist = (("apple", "banana", "apple", "cherry", 1, True, 5))
+# thislist = ["apple", "banana", "apple", "cherry", 1, True, 5]     <-- original
+thislist = list(("apple", "banana", "apple", "cherry", 1, True, 5))
 print(thislist)
 if "apple" in thislist:
     print("yeah")
