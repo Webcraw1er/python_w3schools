@@ -4,6 +4,9 @@ which are lists, tuples, dictionaries, sets, or strings.
 2. so with the for loops we can execute a set of statements once for each items in a list, 
 tuple, set, etc.
 
+for 사용시 i+=1 따위는 파이썬에서 쓰지 않는다!
+미개한 c에서나 쓰지
+
 
 """
 #1. varius looping i iterables
