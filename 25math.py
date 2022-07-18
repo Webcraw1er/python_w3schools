@@ -35,6 +35,7 @@ print(y)
 print(z)
 x= math.pi
 print(x)
+print(math.isfinite(3))
 
 
 """

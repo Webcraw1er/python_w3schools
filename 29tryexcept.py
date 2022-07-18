@@ -15,7 +15,7 @@ try:
 except NameError:
     print("Variable x is not defined.")
 except:
-    print("Some exception occured.")
+    print("Some other unexpected exception occured.")
 
 #2. try else
 print("\n2.")
@@ -50,15 +50,19 @@ except:
 
 #5. raise
 print("\n5.")
-x= -1
+x= input("input a number: ")
+x= int(x)
 if x< 0:
-    #raise Exception("sorry, no numbers below zero")
-    x=x
-x= "helo"
+    raise Exception("sorry, no numbers below zero")
 if not type(x) is int:
-    #raise TypeError("Only integers are allowed")
-    x=x
+    raise TypeError("Only integers are allowed")
 
+# since py only accepts strings as inputs, 
+# if you want to comopare an int with the input, you stringify the int value by "".
+# or you can int() the input type in two ways.
+#   1. x= int(input("type a number: "))
+#   2. x= input("type a number: ")
+#      x= int(x)
 
 """
 1. you can define as many exception blocks yuo want
@@ -66,4 +70,11 @@ if not type(x) is int:
 
 5. you can defien errors with "raise" keyword. 
     the error messages are Capoitalized remember that,
+
+ since py only accepts strings as inputs, 
+ if you want to comopare an int with the input, you stringify the int value by "".
+ or you can int() the input type in two ways.
+   1. x= int(input("type a number: "))
+   2. x= input("type a number: ")
+      x= int(x)
 """

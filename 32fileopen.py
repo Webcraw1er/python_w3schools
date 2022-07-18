@@ -12,12 +12,16 @@ in addition you can decide if your file will be handled as text or binary.
 """
 
 #1. to open a file you only need to specify the name
-#f= open("demofile.txt")
+#   f= open("demofile.txt")
 #      since the default mode is "r" and "t", the above statement is same as
 try:     
     f= open("demofile.txt", "rt")
 except:
-    print("fIle does not exist")
+    print("fIle does not exist, create a new one and open it.")
+    try:
+        f= open("demofile.txt", "x")
+    except:
+        print("something went wrong creating a file.")
 else: 
     print("File opened")
 

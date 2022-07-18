@@ -3,7 +3,7 @@
 #   definition is placed above, characteristics below
 #   1. list items are ordered(as arrays), changeble, and allow duplicate values.
 #   2. list items has indexes, starting from the first item as [0]th element
-#   3. order cannot e changeed
+#   3. order cannot be changeed
 #   4. stack structure(new items placed at the end of the list
 print("1")
 # thislist = ["apple", "banana", "apple", "cherry", 1, True, 5]     <-- original
@@ -53,11 +53,12 @@ print(thislist)
 
 #6. removing the list
 print("\n6.")
-thislist.remove("lemon")
-a= thislist.pop(2)
-print(a)
-thislist.pop()
 print(thislist)
+thislist.remove("lemon")
+a= thislist.pop(2) 
+print(a)
+popped= thislist.pop()
+print(thislist, "\ndeleted element is: ", popped)
 del thislist[1]
 print(thislist)
 thislist.clear()

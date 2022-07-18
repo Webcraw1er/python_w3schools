@@ -5,6 +5,9 @@
 
 .write(): a method that lets you write after you open something.
 """
+from tkinter import Y
+
+
 print("\nbefore append:")
 f= open("demofile.txt", "w")
 f.write("this  file is for testing purposes.\nGood luck!\n-Justin")
@@ -25,7 +28,7 @@ f.close()
 
 print("\nwrite:")
 f=open("demofile.txt", "w")
-f.write("this is how you troll the shit out of it")
+f.write("this is how you troll the shit out of it.\nby deleting everything.")
 f.close()
 
 f= open("demofile.txt", "r")
@@ -54,7 +57,11 @@ f.close()
 import os
 i=0
 for i in range(6):
+
+    #f= open("demofile[i].txt", "w")    # this does not work; ends up creating "demofile[i]" for 6 times.
+    #f= open("demofile%d.txt" % i, "w")     # this DOES WORK!!!!!!!!!!!!!!!
     f= open("demofile{0}.txt".format(i), "w")
+
     f.write("new file!")
     f.close()
     i+=1
@@ -78,7 +85,10 @@ if ans== "Y":
     "a"     : append, will create a file if the specified named file doesn;t exust.
     "w"     : write,            "
 
-
+3. when removing you must import os
+    and then use 
+        os.remove() 
+    method to delete files.
 """
 
 

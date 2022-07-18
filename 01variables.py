@@ -19,6 +19,7 @@ c= float(3) # 3.0
 d= 4
 e= "apple"
 d= e
+c= "banana"
 print("4\n",a) 
 print(type(a))
 print(b)
@@ -89,6 +90,7 @@ print("you can escape letters with \"\\\", just like this \"")
 # 3. variables can change types afterwards according to the code written
 #
 # 4. but can be casted as int(), str(), float() 
+#   these casted variables can also be changed.
 
 # 5. Variable names are case-sensitive.
 #   means that they vary according to the upper/lower cases.

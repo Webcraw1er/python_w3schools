@@ -30,14 +30,16 @@ def myfunc3():
     x= 1000
     global y
     y=100
-    print("y is : ", y)
-
+    
+print("y is : ", y)
 myfunc3()
+print("after the function y is now : ", y)
 print("x is : ", x)
 
 """
-you can use th eglobal keyword in two different ways.
+you can use the global keyword in two different ways.
 1. first, use it to declare a global variable inside a local function.
-2. second, use it to change the global inside a local function.
+2. second, use it to change the global inside a local function.(however the statement must
+    be executed, or "BE SEEN".)
 
 """

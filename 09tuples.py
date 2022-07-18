@@ -55,7 +55,7 @@ print(thistuple)
 #4. deleting an item in a tuple
 print("\n4.")
 x= list(thistuple)
-x.remove(9)
+x.remove(8)
 thistuple=tuple(x)
 print(thistuple)
 

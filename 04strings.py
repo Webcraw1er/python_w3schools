@@ -12,7 +12,7 @@ print(x)
 
 #2. string length
 x= "hello there."
-print("The length of the sentence is: ", len(x))  # space and comma are also one charecter.
+print('The length of the sentence is: ', len(x))  # space and comma are also one charecter.
 
 #3. check if a word or charecter is in string
 x= "hello my name is justin"

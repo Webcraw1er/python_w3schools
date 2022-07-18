@@ -1,6 +1,6 @@
 """
 1. .format() method formats the result so the result is shown as expected.
-    iot formats the selected part of the string.
+    it formats the selected part of the string.
 
 2. when the data is derived from a database ot a user input, they are not shown as expected.
     to control such values, we add placeholders( curly brackets{} ) in the text, and
@@ -20,11 +20,11 @@ print("\n2.")
 quantity= 3
 itemno= 576
 price= 41
-myorder= "I want {} pieces of item number. {} for {:.2f} dollars."
+myorder= "I want {} pieces of item number.{} for {:.2f} dollars."
 print(myorder.format(quantity, itemno, price))
-myorder= "I want {0} pieces of item number. {1} for {2:.2f} dollars."
+myorder= "I want {0} pieces of item number.{1} for {2:.2f} dollars."
 print(myorder.format(quantity, itemno, price))
-myorder= "I want {0} pieces of it. {0} pieces for {2:.1f} dollars"
+myorder= "I want {0} pieces of it.{0} pieces for {2:.1f} dollars"
 print(myorder.format(quantity, itemno, price)) 
 
 #3. named indexes
@@ -40,6 +40,6 @@ print(myorder.format(carname= "Ford", model= "Mustang"))
     ex) {:.2f}      : 소수점 두자리까지
 
 3. when you use named indexes
-    you must write thing occordingly in the print() function.
+    you must write things occordingly in the print() function.
 
 """

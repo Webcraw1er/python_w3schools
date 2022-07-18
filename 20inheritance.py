@@ -7,11 +7,11 @@ from the parent class.
 #0. create a "Person" class
 print("\n0.")
 class Person:
-    def __init__(self, firstname, lastname):
-        self.fname= firstname
-        self.lname= lastname
-    def printname(self):
-        print("The name is : \"", self.fname, " ", self.lname, "\"", sep='')
+    def __init__(seelf, firstname, lastname):
+        seelf.fname= firstname
+        seelf.lname= lastname
+    def printname(seelf):
+        print("The name is : \"", seelf.fname, " ", seelf.lname, "\"", sep='')
 
 p1 = Person("John", "Miller")
 p1.printname()

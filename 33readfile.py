@@ -17,7 +17,8 @@ except:
 else: 
     print("file opened")
 
-print(f.read())
+crlf= "\n"
+print(f.read(), crlf)
 f.close()
 
 f= open("demofile.txt", "r")
@@ -25,15 +26,46 @@ print(f.read(10))
 f.close()
 
 #2. readline
-print("\n2.")
+print("\n2.1")
 f= open("demofile.txt", "rt")
-print(f.readline())
+print("first line: ", f.readline())
+i=0
+for x in f:
+    if i == 1:
+        break
+    print(x)
+    i+=1
+print(f.readline())    
+f.close() 
+
+
+print("\n2.2")
+f= open("demofile.txt", "rt")
+print("first line: ", f.readline())
 i=0
 for x in f:
     if i == 2:
         break
     print(x)
     i+=1
+print(f.readline())    
+f.close() # <- why this happens(how 2.1 and 2.2 is different)? explained below.
+# you see, when a file is opened and read, the next read() or readline() method will continue
+# on the next line of the "latest line that was most recently read".
+# so in 2.1,    line1 was read by readline(),
+#               line2 was read by "for in", index 0  
+#               line3 was read by "for in", index 1
+#               line4 WAS read by "for in", index 2, and then broke(it IS INDEED read, only not printed.)
+#               And then the last readline() method read nothing(read spaces) because no more line was left to read
+
+# now look at 2.2.
+#               line1 was read by readline(),
+#               line2 was read by "for in", index 0  
+#               line3 WAS read by "for in", index 1, and then broke(it IS INDEED read, only not printed.)
+#               line4 WAS READ by readline() finally.
+
+#          Heres the differnece between 2.1 and 2.2
+#               
 """
 1. 파일 경로 설정 시
     1) 만약 파일이 같은 폴더 내에 있다:
@@ -50,7 +82,7 @@ for x in f:
     그 다음 read 매서드는 무조건 그전에 끝난 지점부터 시작함.
     그러니 f.read()로 이미 다 읽어버렸는데
     또 f.read(5) 등으로 읽어버리면 그냥 공백만 나온다. 
-    왜냐 이미 ㅊ파일은 끝났고 공백만 남아있기 떄문.
+    왜냐 이미 파일은 끝났고 공백만 남아있기 떄문.
 
 2. if you want to iterate the read() method to read lines
     in your file, 

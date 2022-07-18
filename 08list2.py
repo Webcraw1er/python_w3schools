@@ -35,6 +35,7 @@ print("so instead, we use .copy() method.")
 list3= list1.copy()
 list3.append(7)
 print(list1)
+print(list3)
 
 #!3. concatenating lists
 print("\n13")

@@ -3,7 +3,7 @@
         is a text, written with javascript object notation.
         is a BUILT-IN PACKAGE/ MODULE, which can be used to work with JSON data.
 
-2. Parsing means to seperate, or devide something into parts to identify the parts and their
+2. Parsing means to separate, or devide something into parts to identify the parts and their
     relation to each other.
 """
 
@@ -14,6 +14,9 @@ import json
 x= '{"name": "John", "age": 30, "city": "New York"}'
 y= json.loads(x)
 print(y["age"])
+
+# load = parse      그러니까 load onto python.  파이썬으로 싣는다.
+# dump= stringify   그러니까 dump into JSON.    대충 JSON에 갖다 버린다.
 
 #3. Dump the shit(Python to JSON)
 print("\n3.")
@@ -51,6 +54,7 @@ print(json.dumps(x, indent=4, separators=("; ", " = "), sort_keys= True))
 3. y= json.dumps(x)
         is used to convert a Python to a JSON.
         in this case, a Python dict to a JSON string.
+        Have in mind that the order is mixed when dumped.
 
         you can convert the following python objects into JSON strings.
         dict
@@ -81,5 +85,9 @@ print(json.dumps(x, indent=4, separators=("; ", " = "), sort_keys= True))
     SEPARATOR parameter:    use the first string to separate each objects,
                             second to separate keys from values. 
     sort_keys parameter:    if the value is True, order the keys in the result.
+
+5. # load = parse      그러니까 load onto python.  파이썬으로 싣는다.
+   # dump= stringify   그러니까 dump into JSON.    대충 JSON에 갖다 버린다.
+
 
 """

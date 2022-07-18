@@ -1,12 +1,13 @@
 """
 1. module is lib in c
 2. it is really, a code library.
-3. elaborately, its a file that contains a set of functions you want to include in your application
+3. elaborately, its a file that contains a set of functions
+    and variables you want to include in your application
 4. creating a module: just save the code you want in a file with a file extension .py
     ex)
         save the following code as mymodule.py.
             def greeting(name):
-                print("Hello, ", +name)
+                print("Hello, " + name)
 
     Then we use the import statement to use the model.
     ex)
@@ -20,6 +21,7 @@
 #1. calling from a module.
 print("\n1.")
 from re import X
+print(X)
 import module23
 
 module23.myfunc1("Justin")
@@ -38,7 +40,7 @@ print(x)
 print("\n3.")
 import platform
 a=platform.system()
-print(X)
+print(a)
 
 #4. import only the part of the module
 print("\n4.")

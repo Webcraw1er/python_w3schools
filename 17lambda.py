@@ -16,7 +16,7 @@ x= lambda x, y, z: x+ y+ z
 print(x(2, 3, 4))
 
 print((lambda x, y: x*y)(5,6))
-# in this case (lambda x, y: x*y) is x in above syntax.
+# in this case (lambda x, y: x*y) is x(the name, representation) in above syntax.
 
 
 #2. more lambda usages
@@ -44,5 +44,24 @@ you will be able to find out that the underlying syntax remains the same.
     line num 1, 2, 3 can be summarized to 
         mydoubler= lambda a: a* 2
     this is clearly a basic lambda function, so mydoubler(11) will work just fine, just like in 
-    lambda function.    
+    lambda function.  
+
+
+
+############3
+    <first>
+    x= lambda x, y, z: x+ y+ z
+    print(x(2, 3, 4))
+
+    <second>
+    print((lambda x, y: x*y)(5,6))
+
+    By the definition implying the lambda "anonymous", i'm pretty sure that the second syntax is the original 
+    usage of the lambda.
+
+    HOwever 
+    the comment 2 demonstrates how lambda is being recycled to be used again.(to be the basis of the function) 
+    this is able because of the name, or function given.
+    그러니까 그냥 일회용으로 쓰려면 print() 내에 람다를 서술하면 되지만, 
+    계속 재활용하려면 함수 내 리턴에 서술하든지 람다에 이름을 붙여야 하는 것.
 """

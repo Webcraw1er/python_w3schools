@@ -84,7 +84,7 @@ for x in myiter:
 3. to create an object/class as an iterator you have to implement the methods __iter__() and 
     __next__() to your object.
 
-    Like you have learned, all classes have init functions, __init__() works similar.
+    Like you have learned, all classes have init functions, __iter__() works similar.
         BUT MUST ALWAYS return the iterator object itself.
     
     the __next__()method also allows you to do operations, 

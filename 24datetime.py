@@ -1,5 +1,7 @@
 """
 1. to use the date to do something, you need to import the datetime module.
+    and in that datetime module, you use datetime object(and the built-in methods
+    and variables in it) to do the task.
 
 
 """
@@ -19,7 +21,7 @@ print(x)
 #3. strftime() method
 x= datetime.datetime.now()
 y= datetime.datetime(1922, 5, 9)
-print(x.strftime("%a"))
+print("\n3.\n", x.strftime("%a"))
 print(y.strftime("%a"))
 
 

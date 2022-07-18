@@ -39,4 +39,7 @@ for right in range(1, 10, 1):
     right+=1
 
 """
+2. you can format any kind of strings. 
+    literally any string
+
 """

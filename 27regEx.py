@@ -9,16 +9,36 @@
 print("\n1.")
 import re
 txt= "the rain in Spain"
+txt10= "abracadabra"
+txt100= "rairaichachacha"
 x= re.search("^the.*Spain$", txt)
 w= re.search("^the*Spain$", txt)
 y= re.search("^the.*Korea$", txt)
 z= re.search("^the.", txt)
 v= re.search("^the", txt)
+s= re.search("^ab.......ra", txt10)
+t= re.search("^ab*ra", txt10)
+r= re.search("^abrac*ra", txt10)        # -> none
+u= re.search("^ab.*ra", txt10)
+h= re.search("^abr.*ra$", txt10)
+i= re.search("ab{1}ra", txt10)
+j= re.search("cha", txt100)
+# just look how it turns out. 이 메타캐릭터들로 문법을 짜는 거다.
+# 예를 들어 . 하나면, 그냥 "하나의" 아무 캐릭터를 의미.
+# 그러나 .* 라면, "어떤 캐릭터가 몇 개 오든간에" 라는 의미가 된다.
+# 즉, *, +, ?, {} 는 모두 다른 메타 캐릭터의 뒤에 붙어 그 캐릭터가 오는 개수를 정의한다.
 print(x)
 print(w)
 print(y)
 print(z)
 print(v)
+print(s)
+print(t)
+print(r)
+print(u)
+print(h)
+print(i)
+print(j)
 x= re.findall("the", txt)
 print(x)
 
@@ -55,7 +75,7 @@ print(re.split("\s", txt, 3))
 print("\n6.")
 txt="the rain in paris"
 print(re.sub("\s", " space ", txt))
-print(re.sub("\s", " space ", txt, 2))
+print(re.sub("\s", " space ", txt, 2))  # replaces the first two occurances.
 
 #7. match object
 print("\n7.")
@@ -68,7 +88,7 @@ x= re.search(r"\bS\w+", txt)
         # so instead of r"\bS\w+", you can write r"\bS.+"
 print(x.span())
 print(x.string)
-print(x.group())
+print(x.group())    # look for any words that starts with the letter "S"
 
 
 """
