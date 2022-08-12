@@ -30,14 +30,14 @@ print('<print TestFolder in the same directory>')       # if the target is in th
 if __name__ == "__main__":                              # prefix is "  ./  ".
     root_dir = "./TestFolder/"                          #   ex) ./TestFolder/
     for (root, dirs, files) in os.walk(root_dir):
-        print("# root : " + root)
+
         if len(dirs) > 0:
             for dir_name in dirs:
                 print(" dir: " + dir_name)
 
-        if len(files) > 0:
-            for file_name in files:
-                print(" file: " + file_name)
+            if len(files) > 0:
+                for file_name in files:
+                    print(" file: " + file_name)
 
 #########  os.walk lets you do the same thing as above.  ##############3
 # lets you search the minor folders with the for in.
